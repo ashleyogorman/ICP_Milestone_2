@@ -22,7 +22,9 @@ RUN pip install --upgrade pip && \
     pip install -r requirements-icp.txt && \
     pip install jupyter
 
-COPY milestone_1.ipynb .
+RUN python3 -c "import easyocr; easyocr.Reader(['ch_sim'], gpu=False)"
+
+COPY milestone_2.ipynb .
 
 # Expose Jupyter port
 EXPOSE 8888
