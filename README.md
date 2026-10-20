@@ -1,5 +1,5 @@
-# ICP_Milestone_1
-Goal: set up multiple pipeline configurations, where in each pipeline configuration provides some result to compare each configurations for ID card OCR
+# ICP Milestone 2
+Deploying, Monitoring, and Profiling Pipeline Variants
 
 Setting up in Chameleon Environment
 1. Log in to Chameleon's hosted JupyterHub.
