@@ -1,0 +1,9 @@
+enhancement,channel,ocr,cards,field exact match (%),card exact match (%),mean CER,assertion pass rate (%),A1_id_format (%),A2_id_matches_date (%),A3_valid_date (%),A4_valid_gender (%),M1 fields correct (%),mean latency (ms),p95 latency (ms)
++.25 contrast,blue,easyocr-runs,2000,61.28,6.3,0.25,31.05,81.35,34.05,48.1,85.35,60.58,4810.72,6670.46
+deskew,green-blue,tesseract-runs,2000,55.42,5.2,0.33,39.4,69.3,44.45,55.25,66.0,56.92,1455.96,1991.44
++.25 contrast,blue,easyocr-fp32,2000,54.03,4.05,0.38,19.55,80.05,26.1,36.95,69.45,60.79,3960.67,4908.53
++.25 contrast,blue,easyocr,2000,53.72,3.7,0.38,20.0,79.9,26.7,36.9,69.55,60.21,3841.92,4824.01
+deskew,green-blue,tesseract-fast,2000,51.69,2.6,0.41,13.45,78.7,14.5,16.4,82.85,64.55,593.29,746.65
+deskew,green-blue,tesseract-best,2000,49.4,2.4,0.44,11.2,79.3,11.9,13.25,80.35,63.43,897.67,1246.52
+deskew,green-blue,tesseract,2000,41.49,1.25,0.53,12.35,68.85,13.25,15.3,65.9,56.92,1481.61,2066.49
+deskew,green-blue,tesseract-2x,2000,33.36,0.15,0.58,5.95,62.65,6.4,10.2,61.95,48.53,1571.41,2061.34

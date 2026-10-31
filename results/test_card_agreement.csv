@@ -1,0 +1,3 @@
+all_assertions,all 8 fields correct,some field wrong
+fails an assertion,7,27578
+passes all assertions,324,2091

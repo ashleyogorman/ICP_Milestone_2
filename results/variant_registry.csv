@@ -1,0 +1,9 @@
+name,version,engine,source,config,files,size_on_disk_bytes,preprocessing,test field exact match (%),test assertion pass rate (%)
+tesseract,1,tesseract,chi_sim.traineddata installed with Tesseract,"{""psm"": 11, ""tessdata"": ""system""}","[""chi_sim.traineddata""]",44366093,deskew + green-blue,41.49,12.35
+tesseract-fast,1,tesseract,https://github.com/tesseract-ocr/tessdata_fast/raw/main/chi_sim.traineddata,"{""psm"": 11, ""tessdata"": ""fast""}","[""chi_sim.traineddata""]",2469156,deskew + green-blue,51.69,13.45
+tesseract-best,1,tesseract,https://github.com/tesseract-ocr/tessdata_best/raw/main/chi_sim.traineddata,"{""psm"": 11, ""tessdata"": ""best""}","[""chi_sim.traineddata""]",13077423,deskew + green-blue,49.4,11.2
+tesseract-2x,1,tesseract,chi_sim.traineddata installed with Tesseract,"{""psm"": 11, ""tessdata"": ""system"", ""input_scale"": 2.0}","[""chi_sim.traineddata""]",44366093,deskew + green-blue,33.36,5.95
+tesseract-runs,1,tesseract,chi_sim.traineddata installed with Tesseract,"{""psm"": 11, ""tessdata"": ""system"", ""split"": ""digit runs and single characters""}","[""chi_sim.traineddata""]",44366093,deskew + green-blue,55.42,39.4
+easyocr,1,easyocr,"EasyOCR 1.6.2 ch_sim, dynamic int8 quantization at load (EasyOCR CPU default)","{""quantize"": true}","[""craft_mlt_25k.pth"", ""zh_sim_g2.pth""]",105103751,+.25 contrast + blue,53.72,20.0
+easyocr-fp32,1,easyocr,"EasyOCR 1.6.2 ch_sim, full precision","{""quantize"": false}","[""craft_mlt_25k.pth"", ""zh_sim_g2.pth""]",105103751,+.25 contrast + blue,54.03,19.55
+easyocr-runs,1,easyocr,"EasyOCR 1.6.2 ch_sim, dynamic int8 quantization at load (EasyOCR CPU default)","{""quantize"": true, ""width_ths"": 0.0, ""split"": ""digit runs and single characters""}","[""craft_mlt_25k.pth"", ""zh_sim_g2.pth""]",105103751,+.25 contrast + blue,61.28,31.05

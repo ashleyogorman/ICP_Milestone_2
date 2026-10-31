@@ -1,0 +1,3 @@
+ocr,preprocessing,field exact match with (%),field exact match without (%),difference (points)
+tesseract,deskew + green-blue,41.49,25.43,16.06
+easyocr,+.25 contrast + blue,53.72,35.57,18.15
