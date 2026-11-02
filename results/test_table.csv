@@ -1,16 +1,16 @@
-enhancement,channel,ocr,baseline,cards,field exact match (%),card exact match (%),mean CER,assertion pass rate (%),A1_id_format (%),A2_id_matches_date (%),A3_valid_date (%),A4_valid_gender (%),M1 fields correct (%),mean latency (ms),p95 latency (ms)
-+.25 contrast,blue,easyocr,False,2000,53.72,3.7,0.38,20.0,79.9,26.7,36.9,69.55,60.21,3841.92,4824.01
-+50 brightness,blue,easyocr,False,2000,52.82,3.7,0.38,20.1,81.25,25.45,35.3,70.5,58.86,3969.94,5055.74
-deskew,blue,easyocr,False,2000,49.24,2.45,0.47,15.65,84.05,22.1,26.2,69.1,63.51,4325.0,5636.51
-deskew,green-blue,tesseract,False,2000,41.49,1.25,0.53,12.35,68.85,13.25,15.3,65.9,56.92,1481.61,2066.49
-deskew,blue,tesseract,False,2000,39.72,1.4,0.56,12.25,65.65,13.5,16.0,63.05,55.26,1456.7,1993.35
-+50 brightness,none,easyocr,False,2000,37.18,0.1,0.64,2.0,72.05,3.85,6.4,66.55,60.2,5307.76,6833.09
-deskew,green,tesseract,False,2000,37.0,1.25,0.68,11.1,60.45,11.7,13.75,61.0,55.29,1467.59,2029.39
-none,none,easyocr,False,2000,35.57,0.1,0.76,1.35,71.15,1.6,2.35,67.8,60.01,5120.28,6530.44
-+50 brightness,green,tesseract,False,2000,32.28,1.15,0.67,8.0,47.3,9.2,13.7,48.05,48.19,1524.42,2219.24
-+.75 contrast,green-blue,easyocr,False,2000,28.04,0.55,0.59,7.5,44.95,11.35,20.95,40.9,32.17,4436.36,5900.02
-none,none,tesseract,False,2000,25.43,0.75,1.0,4.85,39.15,5.05,7.7,43.45,47.14,1595.57,2216.21
-+.75 contrast,none,tesseract,False,2000,21.94,0.15,0.73,5.6,35.35,6.75,14.75,35.6,31.74,1575.21,2400.94
-none,none,tesseract (default),True,2000,7.48,0.0,1.51,0.0,30.6,0.0,0.0,0.25,39.72,1612.6,2342.27
-precise laplacian,red-blue,easyocr,False,2000,0.18,0.0,1.13,0.0,0.0,0.0,0.0,0.8,2.54,5414.42,7778.01
-precise laplacian,none,tesseract,False,2000,0.06,0.0,1.36,0.0,0.05,0.0,0.0,0.0,3.13,1775.63,2847.94
+enhancement,channel,ocr,baseline,cards,field exact match (%),card exact match (%),mean CER,assertion pass rate (%),A1_id_format (%),A2_id_matches_date (%),A3_valid_date (%),A4_valid_gender (%),M1 accuracy (%),M1 fields correct (%)
++.25 contrast,blue,easyocr,False,2000,53.72,3.7,0.38,20.0,79.9,26.7,36.9,69.55,55.14,60.21
++50 brightness,blue,easyocr,False,2000,52.82,3.7,0.38,20.1,81.25,25.45,35.3,70.5,54.25,58.86
+none,blue,easyocr,False,2000,49.82,2.4,0.47,14.05,81.1,20.95,26.2,69.3,60.72,64.27
+deskew,green-blue,tesseract,False,2000,41.49,1.25,0.53,12.35,68.85,13.25,15.3,65.9,59.88,56.92
+deskew,blue,tesseract,False,2000,39.72,1.4,0.56,12.25,65.65,13.5,16.0,63.05,58.39,55.26
+deskew,green,tesseract,False,2000,37.0,1.25,0.68,11.1,60.45,11.7,13.75,61.0,57.7,55.29
+none,none,easyocr,False,2000,35.57,0.1,0.76,1.35,71.15,1.6,2.35,67.8,56.44,60.01
++50 brightness,red-green,easyocr,False,2000,34.86,0.1,0.74,1.35,73.7,3.0,4.95,60.85,51.95,56.21
++50% saturation,red,easyocr,False,2000,30.12,0.0,0.9,0.05,67.05,0.15,0.3,70.25,50.52,57.86
+sharpen,green,tesseract,False,2000,29.39,0.7,0.83,5.6,45.5,6.0,7.9,47.95,46.82,50.18
+none,none,tesseract,False,2000,25.43,0.75,1.0,4.85,39.15,5.05,7.7,43.45,43.89,47.14
++50% saturation,none,tesseract,False,2000,21.49,0.4,1.11,3.75,31.55,4.0,6.6,35.35,43.76,46.17
+none,none,tesseract (default),True,2000,7.48,0.0,1.51,0.0,30.6,0.0,0.0,0.25,37.08,39.72
+precise laplacian,none,easyocr,False,2000,0.18,0.0,1.14,0.0,0.0,0.0,0.0,0.9,0.26,2.25
+precise laplacian,red,tesseract,False,2000,0.09,0.0,1.37,0.0,0.1,0.0,0.0,0.05,0.21,3.35

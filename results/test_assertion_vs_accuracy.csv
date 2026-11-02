@@ -1,16 +1,16 @@
 enhancement,channel,ocr,field exact match (%),assertion pass rate (%),rank by accuracy,rank by assertions
 +.25 contrast,blue,easyocr,53.72,20.0,1,2
 +50 brightness,blue,easyocr,52.82,20.1,2,1
-deskew,blue,easyocr,49.24,15.65,3,3
+none,blue,easyocr,49.82,14.05,3,3
 deskew,green-blue,tesseract,41.49,12.35,4,4
 deskew,blue,tesseract,39.72,12.25,5,5
-+50 brightness,none,easyocr,37.18,2.0,6,11
-deskew,green,tesseract,37.0,11.1,7,6
-none,none,easyocr,35.57,1.35,8,12
-+50 brightness,green,tesseract,32.28,8.0,9,7
-+.75 contrast,green-blue,easyocr,28.04,7.5,10,8
-none,none,tesseract,25.43,4.85,11,10
-+.75 contrast,none,tesseract,21.94,5.6,12,9
+deskew,green,tesseract,37.0,11.1,6,6
+none,none,easyocr,35.57,1.35,7,10
++50 brightness,red-green,easyocr,34.86,1.35,8,10
++50% saturation,red,easyocr,30.12,0.05,9,12
+sharpen,green,tesseract,29.39,5.6,10,7
+none,none,tesseract,25.43,4.85,11,8
++50% saturation,none,tesseract,21.49,3.75,12,9
 none,none,tesseract (default),7.48,0.0,13,13
-precise laplacian,red-blue,easyocr,0.18,0.0,14,13
-precise laplacian,none,tesseract,0.06,0.0,15,13
+precise laplacian,none,easyocr,0.18,0.0,14,13
+precise laplacian,red,tesseract,0.09,0.0,15,13
