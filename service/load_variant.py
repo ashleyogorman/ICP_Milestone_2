@@ -2,8 +2,8 @@
 
 env vars:
 
-    VARIANT           variant name in the registry, e.g. easyocr-runs   (required)
-    VARIANT_VERSION   version folder, default "1"
+    VARIANT           variant name in the registry
+    VARIANT_VERSION   optional override
     ENHANCEMENT       optional override
     CHANNEL           optional override
 
@@ -14,6 +14,7 @@ import json
 import os
 from minio import Minio
 from icp.ocr import build_ocr
+import logging
  
 MINIO_ENDPOINT = "minio:9000"
 MINIO_ACCESS_KEY = "minioadmin"
@@ -22,7 +23,8 @@ REGISTRY_BUCKET = "icp-ocr-variants"
 VARIANT_VERSION = "1"
 MODEL_DIR = "/models"
  
- 
+log = logging.getLogger("icp")
+
 def load_variant():
     name = os.environ["VARIANT"]
     client = Minio(MINIO_ENDPOINT, access_key=MINIO_ACCESS_KEY, secret_key=MINIO_SECRET_KEY, secure=False)
@@ -50,8 +52,8 @@ def load_variant():
     # ocr that the files downloaded
     ocr = build_ocr(metadata["engine"], metadata["config"], MODEL_DIR)
  
-    print(f"Loaded variant {name} ({metadata['engine']}), "
-          f"preprocessing: {enhancement} + {channel}, files: {sorted(downloaded)}", flush=True)
+    log.info(f"Loaded variant {name} ({metadata['engine']}), "
+          f"preprocessing: {enhancement} + {channel}, files: {sorted(downloaded)}")
     return {
         "name": name,
         "ocr": ocr,
