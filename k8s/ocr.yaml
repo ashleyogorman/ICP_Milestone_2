@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ocr
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ocr
+  template:
+    metadata:
+      labels:
+        app: ocr
+    spec:
+      containers:
+        - name: ocr
+          image: icp-ocr-service
+          imagePullPolicy: Never
+          ports:
+            - name: grpc
+              containerPort: 50051
+            - name: metrics
+              containerPort: 8000
+          env:
+            - name: VARIANT
+              value: "easyocr-runs"
+            - name: MAX_BATCH
+              value: "4"
+            - name: BATCH_TIMEOUT_MS
+              value: "10"
+            - name: CORES
+              valueFrom:
+                resourceFieldRef:
+                  resource: limits.cpu
+                  divisor: "1"
+          resources:
+            requests:
+              cpu: "1"
+              memory: "2Gi"
+            limits:
+              cpu: "1"
+              memory: "4Gi"
+          readinessProbe:
+            tcpSocket:
+              port: 50051
+            periodSeconds: 2
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ocr
+spec:
+  selector:
+    app: ocr
+  ports:
+    - name: grpc
+      port: 50051
+      targetPort: 50051
+    - name: metrics
+      port: 8000
+      targetPort: 8000

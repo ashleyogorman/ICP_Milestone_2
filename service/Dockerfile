@@ -21,6 +21,7 @@ RUN pip install --upgrade pip && \
 # Only the code the service needs
 COPY icp/ icp/
 COPY service/ service/
+COPY registry/ registry/
  
 # So "import icp" works from service/server.py
 ENV PYTHONPATH=/icp-milestone-2

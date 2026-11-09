@@ -1,6 +1,6 @@
 """Fill the MinIO model registry with the OCR variants in variant_registry.csv
  
-this is a standalone version of notebook cells 69 and 72
+this is a standalone version of notebook cells 69 - 72
  
 Run from root inside container:
     MINIO_ENDPOINT=minio:9000 python3 setup/upload_variants.py
@@ -44,11 +44,20 @@ def tessdata_dir(kind: str) -> str:
         print(f"  downloading tessdata_{kind} ...", flush=True)
         urllib.request.urlretrieve(TESSDATA_SOURCES[kind], path)
     return folder
+
+def easyocr_dir() -> str:
+    """Folder holding the EasyOCR weights (downloads them if needed)."""
+    needed = ("craft_mlt_25k.pth", "zh_sim_g2.pth")
+    if not all(os.path.exists(os.path.join(EASYOCR_MODEL_DIR, f)) for f in needed):
+        import easyocr
+        print("  downloading EasyOCR weights ...", flush=True)
+        easyocr.Reader(["ch_sim"], gpu=False, model_storage_directory=EASYOCR_MODEL_DIR)
+    return EASYOCR_MODEL_DIR
  
  
 def local_files(engine: str, config: dict, filenames: list[str]) -> list[str]:
     """Map the file names stored in the registry CSV to paths on this machine."""
-    folder = EASYOCR_MODEL_DIR if engine == "easyocr" else tessdata_dir(config["tessdata"])
+    folder = easyocr_dir() if engine == "easyocr" else tessdata_dir(config["tessdata"])
     paths = [os.path.join(folder, f) for f in filenames]
     for p in paths:
         if not os.path.exists(p):

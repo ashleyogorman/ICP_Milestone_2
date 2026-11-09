@@ -1,0 +1,21 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+    name: upload-variants
+spec:
+    backoffLimit: 4
+    template:
+        spec:
+            restartPolicy: OnFailure
+            containers:
+                - name: upload-variants
+                  image: icp-ocr-service
+                  imagePullPolicy: Never
+                  command: ["python3", "registry/upload_variants.py"]
+                  resources:
+                      requests:
+                          cpu: "250m"
+                          memory: "512Mi"
+                      limits:
+                          cpu: "1"
+                          memory: "2Gi"
