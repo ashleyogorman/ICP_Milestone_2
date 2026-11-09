@@ -9,3 +9,4 @@ datasets
 minio
 grpcio
 grpcio-tools
+prometheus-client
