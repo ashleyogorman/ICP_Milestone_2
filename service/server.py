@@ -51,8 +51,9 @@ LAT_HIST = Histogram(
 )
 QUEUE_LENGTH = Gauge("icp_queue_length", "Requests waiting in the queue")
 CURR_BATCH_SIZE = Gauge("icp_current_batch_size", "Current size of batch")
-# PASS_COUNTER = 
-# FAIL_COUNTER = 
+ASSERTIONS = Counter("icp_assertions_total", "Cards checked by assertions", ["result"])
+ASSERTION_CHECKS = Counter("icp_assertion_checks_total", "Individual assertion results", ["assertion", "result"])
+# ASSERTION_CHECKS.labels(assertion="A2", result="fail").inc()
 
 # running the pipeline function
 def run_card(variant, image_bytes): # varient from load variant and 
@@ -122,6 +123,9 @@ class OcrServicer(icp_pb2_grpc.OcrServiceServicer):
 
         LAT_HIST.observe(time.perf_counter() - enqueued)
         REQUEST_COUNT.inc()
+        # PLACEHOLDER!! DONT FORGET TO CHANGE
+        ASSERTIONS.labels(result="pass").inc()
+
         
         # put into CardResponse from .proto
         return icp_pb2.CardResponse(
