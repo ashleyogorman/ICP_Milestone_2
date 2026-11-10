@@ -20,6 +20,7 @@ SPLITS = "results/splits/splits.json"
  
 async def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--round-robin", action="store_true")
     parser.add_argument("--n", type=int, default=8, help="number of cards to send at once")
     parser.add_argument("--target", default="localhost:50051")
     args = parser.parse_args()
@@ -29,7 +30,10 @@ async def main():
     raw = ds.cast_column("image", HFImage(decode=False))
     cards = splits["test"][: args.n]
  
-    async with grpc.aio.insecure_channel(args.target) as channel:
+    options = [("grpc.lb_policy_name", "round_robin")] if args.round_robin else []
+    async with grpc.aio.insecure_channel(args.target, options=options) as channel:
+        await channel.channel_ready()
+        await asyncio.sleep(1)
         stub = icp_pb2_grpc.OcrServiceStub(channel)
  
         async def send(card):
