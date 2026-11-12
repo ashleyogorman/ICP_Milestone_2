@@ -1,0 +1,5 @@
+,cards passing,cards failing,pass rate (%)
+A1_id_format,20000,0,100.0
+A2_id_matches_date,20000,0,100.0
+A3_valid_date,19626,374,98.13
+A4_valid_gender,20000,0,100.0
