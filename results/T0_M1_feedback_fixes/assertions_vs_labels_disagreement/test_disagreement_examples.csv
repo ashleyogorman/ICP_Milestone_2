@@ -1,0 +1,9 @@
+cell,card,configuration,wrong fields,failed assertions
+"pass, some field wrong",8853,deskew + green-blue + tesseract,"name: '谢卓镜' vs '谢卓镰', ethnicity: '汊' vs '汉', address: '言林省四平市公主市' vs '吉林省四平市公主岭市'",
+"pass, some field wrong",933,deskew + green-blue + tesseract,ethnicity: '汊' vs '汉',
+"pass, some field wrong",7510,deskew + green-blue + tesseract,id_number: '545427198006010651' vs '545427198006016651',
+"pass, some field wrong",16146,deskew + green-blue + tesseract,name: '资王江' vs '贲王江',
+"pass, some field wrong",17127,deskew + green-blue + tesseract,"ethnicity: '汊' vs '汉', address: '内蒙古自治区乌兰寡布市四子王旗' vs '内蒙古自治区乌兰察布市四子王旗'",
+"fail, all correct",14050,+.25 contrast + blue + easyocr,,A3_valid_date
+"fail, all correct",7621,+.25 contrast + blue + easyocr,,A3_valid_date
+"fail, all correct",8622,+.25 contrast + blue + easyocr,,A3_valid_date

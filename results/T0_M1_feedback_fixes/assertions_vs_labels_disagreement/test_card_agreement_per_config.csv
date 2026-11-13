@@ -1,0 +1,16 @@
+enhancement,channel,ocr,"fail, all correct","fail, some field wrong","pass, all correct","pass, some field wrong"
++.25 contrast,blue,easyocr,3,1597,71,329
++50 brightness,blue,easyocr,3,1595,71,331
++50 brightness,red-green,easyocr,0,1973,2,25
++50% saturation,none,tesseract,0,1925,8,67
++50% saturation,red,easyocr,0,1999,0,1
+deskew,blue,tesseract,0,1755,28,217
+deskew,green,tesseract,0,1778,25,197
+deskew,green-blue,tesseract,0,1753,25,222
+none,blue,easyocr,1,1718,47,234
+none,none,easyocr,0,1973,2,25
+none,none,tesseract,0,1903,15,82
+none,none,tesseract (default),0,2000,0,0
+precise laplacian,none,easyocr,0,2000,0,0
+precise laplacian,red,tesseract,0,2000,0,0
+sharpen,green,tesseract,0,1888,14,98

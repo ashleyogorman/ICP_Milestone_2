@@ -29,6 +29,8 @@ from PIL import Image
 import icp_pb2
 import icp_pb2_grpc
 from icp.preprocess import preprocess, unrotate_boxes
+from icp.fields import assign_fields
+from icp.assertions import check_card
 from load_variant import load_variant
 import logging
 from prometheus_client import Counter, Gauge, Histogram, start_http_server
@@ -62,6 +64,10 @@ def run_card(variant, image_bytes): # varient from load variant and
     detections = variant["ocr"](x)
     if rotation is not None:
         detections = unrotate_boxes(detections, rotation)
+    checks = check_card(assign_fields(detections))
+    for name, passed in checks.items():
+        ASSERTION_CHECKS.labels(assertion=name, result="pass" if passed else "fail").inc()
+    ASSERTIONS.labels(result="pass" if all(checks.values()) else "fail").inc()
     return detections
 
 # function for calling run_card on batches
@@ -123,8 +129,6 @@ class OcrServicer(icp_pb2_grpc.OcrServiceServicer):
 
         LAT_HIST.observe(time.perf_counter() - enqueued)
         REQUEST_COUNT.inc()
-        # PLACEHOLDER!! DONT FORGET TO CHANGE
-        ASSERTIONS.labels(result="pass").inc()
 
         
         # put into CardResponse from .proto
