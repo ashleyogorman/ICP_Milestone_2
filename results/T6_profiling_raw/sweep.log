@@ -1,0 +1,266 @@
+nohup: ignoring input
+skipping easyocr_r1_c1_b1, already done
+easyocr_r1_c1_b4: 1 replicas x 1 cores, batch 4
+2026-11-15 04:29:25,799 INFO Scaling begun
+deployment.apps/ocr env updated
+deployment.apps/ocr scaled
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+deployment "ocr" successfully rolled out
+2026-11-15 04:29:36,292 INFO Scaled to 1 replicas x 1 cores, variant=easyocr, max_batch=4, timeout=10ms
+  easyocr_r1_c1_b4 at 0.1 req/s: p95 20883.5 ms, fail
+  easyocr_r1_c1_b4 at 0.05 req/s: p95 7338.1 ms, pass
+  easyocr_r1_c1_b4 at 0.075 req/s: p95 9161.8 ms, pass
+  easyocr_r1_c1_b4 at 0.087 req/s: p95 9675.0 ms, pass
+easyocr_r1_c1_b4: max rate meeting SLO = 0.087 req/s
+easyocr_r1_c1_b8: 1 replicas x 1 cores, batch 8
+2026-11-15 04:40:10,202 INFO Scaling begun
+deployment.apps/ocr env updated
+deployment.apps/ocr scaled
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+deployment "ocr" successfully rolled out
+2026-11-15 04:40:20,928 INFO Scaled to 1 replicas x 1 cores, variant=easyocr, max_batch=8, timeout=10ms
+  easyocr_r1_c1_b8 at 0.1 req/s: p95 20647.2 ms, fail
+  easyocr_r1_c1_b8 at 0.05 req/s: p95 7475.7 ms, pass
+  easyocr_r1_c1_b8 at 0.075 req/s: p95 8917.1 ms, pass
+  easyocr_r1_c1_b8 at 0.087 req/s: p95 9885.1 ms, pass
+easyocr_r1_c1_b8: max rate meeting SLO = 0.087 req/s
+easyocr_r2_c1_b1: 2 replicas x 1 cores, batch 1
+2026-11-15 04:50:49,115 INFO Scaling begun
+deployment.apps/ocr env updated
+deployment.apps/ocr scaled
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 2 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+deployment "ocr" successfully rolled out
+2026-11-15 04:51:06,653 INFO Scaled to 2 replicas x 1 cores, variant=easyocr, max_batch=1, timeout=10ms
+  easyocr_r2_c1_b1 at 0.2 req/s: p95 10319.0 ms, pass
+  easyocr_r2_c1_b1 at 0.4 req/s: p95 19154.9 ms, fail
+  easyocr_r2_c1_b1 at 0.3 req/s: p95 13073.5 ms, pass
+  easyocr_r2_c1_b1 at 0.35 req/s: p95 17044.1 ms, pass
+  easyocr_r2_c1_b1 at 0.375 req/s: p95 16625.3 ms, pass
+easyocr_r2_c1_b1: max rate meeting SLO = 0.375 req/s
+easyocr_r2_c1_b4: 2 replicas x 1 cores, batch 4
+2026-11-15 05:02:56,885 INFO Scaling begun
+deployment.apps/ocr env updated
+deployment.apps/ocr scaled
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+deployment "ocr" successfully rolled out
+2026-11-15 05:03:14,793 INFO Scaled to 2 replicas x 1 cores, variant=easyocr, max_batch=4, timeout=10ms
+  easyocr_r2_c1_b4 at 0.2 req/s: p95 11036.3 ms, pass
+  easyocr_r2_c1_b4 at 0.4 req/s: p95 30492.8 ms, fail
+  easyocr_r2_c1_b4 at 0.3 req/s: p95 17166.6 ms, pass
+  easyocr_r2_c1_b4 at 0.35 req/s: p95 21464.9 ms, fail
+  easyocr_r2_c1_b4 at 0.325 req/s: p95 19795.6 ms, fail
+easyocr_r2_c1_b4: max rate meeting SLO = 0.3 req/s
+easyocr_r2_c1_b8: 2 replicas x 1 cores, batch 8
+2026-11-15 05:14:53,184 INFO Scaling begun
+deployment.apps/ocr env updated
+deployment.apps/ocr scaled
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+deployment "ocr" successfully rolled out
+2026-11-15 05:15:12,914 INFO Scaled to 2 replicas x 1 cores, variant=easyocr, max_batch=8, timeout=10ms
+  easyocr_r2_c1_b8 at 0.2 req/s: p95 10497.5 ms, pass
+  easyocr_r2_c1_b8 at 0.4 req/s: p95 27041.3 ms, fail
+  easyocr_r2_c1_b8 at 0.3 req/s: p95 16422.7 ms, pass
+  easyocr_r2_c1_b8 at 0.35 req/s: p95 21348.4 ms, fail
+  easyocr_r2_c1_b8 at 0.325 req/s: p95 18562.1 ms, fail
+easyocr_r2_c1_b8: max rate meeting SLO = 0.3 req/s
+easyocr_r2_c2_b1: 2 replicas x 2 cores, batch 1
+2026-11-15 05:26:55,704 INFO Scaling begun
+deployment.apps/ocr env updated
+deployment.apps/ocr resource requirements updated
+deployment.apps/ocr scaled
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+deployment "ocr" successfully rolled out
+2026-11-15 05:27:13,959 INFO Scaled to 2 replicas x 2 cores, variant=easyocr, max_batch=1, timeout=10ms
+  easyocr_r2_c2_b1 at 0.4 req/s: p95 5658.5 ms, pass
+  easyocr_r2_c2_b1 at 0.8 req/s: p95 16989.7 ms, pass
+  easyocr_r2_c2_b1 at 1.6 req/s: p95 123487.4 ms, fail
+  easyocr_r2_c2_b1 at 1.2 req/s: p95 None ms, fail
+  easyocr_r2_c2_b1 at 1 req/s: p95 None ms, fail
+  easyocr_r2_c2_b1 at 0.9 req/s: p95 None ms, fail
+easyocr_r2_c2_b1: max rate meeting SLO = 0.8 req/s
+easyocr_r2_c2_b4: 2 replicas x 2 cores, batch 4
+2026-11-15 05:49:07,735 INFO Scaling begun
+deployment.apps/ocr env updated
+deployment.apps/ocr scaled
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+deployment "ocr" successfully rolled out
+2026-11-15 05:49:56,695 INFO Scaled to 2 replicas x 2 cores, variant=easyocr, max_batch=4, timeout=10ms
+  easyocr_r2_c2_b4 at 0.4 req/s: p95 5570.1 ms, pass
+  easyocr_r2_c2_b4 at 0.8 req/s: p95 15091.0 ms, pass
+  easyocr_r2_c2_b4 at 1.6 req/s: p95 123207.9 ms, fail
+  easyocr_r2_c2_b4 at 1.2 req/s: p95 66029.4 ms, fail
+  easyocr_r2_c2_b4 at 1 req/s: p95 38457.8 ms, fail
+  easyocr_r2_c2_b4 at 0.9 req/s: p95 24423.7 ms, fail
+easyocr_r2_c2_b4: max rate meeting SLO = 0.8 req/s
+easyocr_r2_c2_b8: 2 replicas x 2 cores, batch 8
+2026-11-15 06:11:39,667 INFO Scaling begun
+deployment.apps/ocr env updated
+deployment.apps/ocr scaled
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 out of 2 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+deployment "ocr" successfully rolled out
+2026-11-15 06:12:28,534 INFO Scaled to 2 replicas x 2 cores, variant=easyocr, max_batch=8, timeout=10ms
+  easyocr_r2_c2_b8 at 0.4 req/s: p95 5980.7 ms, pass
+  easyocr_r2_c2_b8 at 0.8 req/s: p95 18488.8 ms, fail
+  easyocr_r2_c2_b8 at 0.6 req/s: p95 9606.2 ms, pass
+  easyocr_r2_c2_b8 at 0.7 req/s: p95 12518.7 ms, pass
+  easyocr_r2_c2_b8 at 0.75 req/s: p95 14932.6 ms, pass
+easyocr_r2_c2_b8: max rate meeting SLO = 0.75 req/s
+easyocr_r4_c1_b1: 4 replicas x 1 cores, batch 1
+2026-11-15 06:24:03,625 INFO Scaling begun
+deployment.apps/ocr env updated
+deployment.apps/ocr resource requirements updated
+deployment.apps/ocr scaled
+Waiting for deployment "ocr" rollout to finish: 2 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 2 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 2 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 3 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 3 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 3 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 3 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 3 of 4 updated replicas are available...
+Waiting for deployment "ocr" rollout to finish: 3 of 4 updated replicas are available...
+Waiting for deployment "ocr" rollout to finish: 3 of 4 updated replicas are available...
+deployment "ocr" successfully rolled out
+2026-11-15 06:25:25,031 INFO Scaled to 4 replicas x 1 cores, variant=easyocr, max_batch=1, timeout=10ms
+  easyocr_r4_c1_b1 at 0.4 req/s: p95 5944.6 ms, pass
+  easyocr_r4_c1_b1 at 0.8 req/s: p95 11755.2 ms, pass
+  easyocr_r4_c1_b1 at 1.6 req/s: p95 110581.9 ms, fail
+  easyocr_r4_c1_b1 at 1.2 req/s: p95 57679.2 ms, fail
+  easyocr_r4_c1_b1 at 1 req/s: p95 33489.7 ms, fail
+  easyocr_r4_c1_b1 at 0.9 req/s: p95 18585.3 ms, fail
+easyocr_r4_c1_b1: max rate meeting SLO = 0.8 req/s
+easyocr_r4_c1_b4: 4 replicas x 1 cores, batch 4
+2026-11-15 06:43:02,256 INFO Scaling begun
+deployment.apps/ocr env updated
+deployment.apps/ocr scaled
+Waiting for deployment "ocr" rollout to finish: 2 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 2 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 2 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 2 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 3 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 3 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 3 of 4 updated replicas are available...
+Waiting for deployment "ocr" rollout to finish: 3 of 4 updated replicas are available...
+deployment "ocr" successfully rolled out
+2026-11-15 06:43:42,083 INFO Scaled to 4 replicas x 1 cores, variant=easyocr, max_batch=4, timeout=10ms
+  easyocr_r4_c1_b4 at 0.4 req/s: p95 6164.3 ms, pass
+  easyocr_r4_c1_b4 at 0.8 req/s: p95 15303.4 ms, pass
+  easyocr_r4_c1_b4 at 1.6 req/s: p95 116185.1 ms, fail
+  easyocr_r4_c1_b4 at 1.2 req/s: p95 60739.3 ms, fail
+  easyocr_r4_c1_b4 at 1 req/s: p95 39888.2 ms, fail
+  easyocr_r4_c1_b4 at 0.9 req/s: p95 26571.5 ms, fail
+easyocr_r4_c1_b4: max rate meeting SLO = 0.8 req/s
+easyocr_r4_c1_b8: 4 replicas x 1 cores, batch 8
+2026-11-15 07:05:26,007 INFO Scaling begun
+deployment.apps/ocr env updated
+deployment.apps/ocr scaled
+Waiting for deployment "ocr" rollout to finish: 2 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 2 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 2 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 2 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 2 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 3 out of 4 new replicas have been updated...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 3 of 4 updated replicas are available...
+Waiting for deployment "ocr" rollout to finish: 3 of 4 updated replicas are available...
+deployment "ocr" successfully rolled out
+2026-11-15 07:06:04,276 INFO Scaled to 4 replicas x 1 cores, variant=easyocr, max_batch=8, timeout=10ms
+  easyocr_r4_c1_b8 at 0.4 req/s: p95 6813.6 ms, pass
+  easyocr_r4_c1_b8 at 0.8 req/s: p95 16106.0 ms, pass
+  easyocr_r4_c1_b8 at 1.6 req/s: p95 125639.0 ms, fail
+  easyocr_r4_c1_b8 at 1.2 req/s: p95 76598.6 ms, fail
+  easyocr_r4_c1_b8 at 1 req/s: p95 48461.9 ms, fail
+  easyocr_r4_c1_b8 at 0.9 req/s: p95 31257.3 ms, fail
+easyocr_r4_c1_b8: max rate meeting SLO = 0.8 req/s
+easyocr_r1_c4_b1: 1 replicas x 4 cores, batch 1
+2026-11-15 07:23:51,293 INFO Scaling begun
+deployment.apps/ocr env updated
+deployment.apps/ocr resource requirements updated
+deployment.apps/ocr scaled
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+deployment "ocr" successfully rolled out
+2026-11-15 07:24:32,336 INFO Scaled to 1 replicas x 4 cores, variant=easyocr, max_batch=1, timeout=10ms
+  easyocr_r1_c4_b1 at 0.4 req/s: p95 5740.7 ms, pass
+  easyocr_r1_c4_b1 at 0.8 req/s: p95 29149.1 ms, fail
+  easyocr_r1_c4_b1 at 0.6 req/s: p95 9977.9 ms, pass
+  easyocr_r1_c4_b1 at 0.7 req/s: p95 15330.2 ms, pass
+  easyocr_r1_c4_b1 at 0.75 req/s: p95 19487.1 ms, fail
+easyocr_r1_c4_b1: max rate meeting SLO = 0.7 req/s
+easyocr_r1_c4_b4: 1 replicas x 4 cores, batch 4
+2026-11-15 07:36:41,689 INFO Scaling begun
+deployment.apps/ocr env updated
+deployment.apps/ocr scaled
+Waiting for deployment "ocr" rollout to finish: 1 old replicas are pending termination...
+error: timed out waiting for the condition
+Traceback (most recent call last):
+  File "/home/cc/ICP_Milestone_2/scripts/sweep.py", line 136, in <module>
+    main()
+  File "/home/cc/ICP_Milestone_2/scripts/sweep.py", line 128, in main
+    config_scale(replicas, cores, variant, max_batch, BATCH_TIMEOUT_MS)
+  File "/home/cc/ICP_Milestone_2/scripts/scale_ocr.py", line 23, in config_scale
+    subprocess.run(["kubectl", "rollout", "status", "deployment/ocr", "--timeout=300s"], check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['kubectl', 'rollout', 'status', 'deployment/ocr', '--timeout=300s']' returned non-zero exit status 1.
+nohup: ignoring input
+skipping easyocr_r1_c1_b1, already done
+skipping easyocr_r1_c1_b4, already done
+skipping easyocr_r1_c1_b8, already done
+skipping easyocr_r2_c1_b1, already done
+skipping easyocr_r2_c1_b4, already done
+skipping easyocr_r2_c1_b8, already done
+skipping easyocr_r2_c2_b1, already done
+skipping easyocr_r2_c2_b4, already done
+skipping easyocr_r2_c2_b8, already done
+skipping easyocr_r4_c1_b1, already done
+skipping easyocr_r4_c1_b4, already done
+skipping easyocr_r4_c1_b8, already done
+skipping easyocr_r1_c4_b1, already done
+easyocr_r1_c4_b4: 1 replicas x 4 cores, batch 4
+2026-11-15 19:23:56,384 INFO Scaling begun
+deployment.apps/ocr scaled
+deployment "ocr" successfully rolled out
+2026-11-15 19:23:57,305 INFO Scaled to 1 replicas x 4 cores, variant=easyocr, max_batch=4, timeout=10ms
+  easyocr_r1_c4_b4 at 0.4 req/s: p95 7849.8 ms, pass
