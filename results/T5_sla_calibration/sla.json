@@ -1,0 +1,19 @@
+{
+  "reference_config": "easyocr (+.25 contrast + blue), 1 replica x 1 core, max_batch 1",
+  "reference_note": "M1 recommendation corrected from T0",
+  "unit": "ms per card, p95 end to end",
+  "arrivals": "Poisson, seed 35 and achieved rates reported next to targets",
+  "L0_ms": 9211.9,
+  "SLO_ms": 18423.8,
+  "T0_rps": 0.12,
+  "T0_achieved_rps": 0.147,
+  "target_rps": 0.48,
+  "multiplier": 4,
+  "runs": [
+    {"file": "rate0.03_dur900_20261115-021903.jsonl", "target": 0.03, "achieved": 0.039, "p95_ms": 9211.9, "role": "L0"},
+    {"file": "rate0.08_dur300_20261115-024037.jsonl", "target": 0.08, "achieved": 0.107, "p95_ms": 13715.9, "passed": true},
+    {"file": "rate0.1_dur300_20261115-024731.jsonl",  "target": 0.1,  "achieved": 0.13,  "p95_ms": 14843.0, "passed": true},
+    {"file": "rate0.12_dur300_20261115-025901.jsonl", "target": 0.12, "achieved": 0.147, "p95_ms": 16928.0, "passed": true},
+    {"file": "rate0.14_dur300_20261115-030948.jsonl", "target": 0.14, "achieved": 0.15,  "p95_ms": 21498.3, "passed": false}
+  ]
+}
