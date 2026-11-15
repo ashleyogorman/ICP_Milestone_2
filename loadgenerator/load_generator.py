@@ -8,6 +8,7 @@ import numpy as np
 from datasets import Image as HFImage, load_dataset
 import icp_pb2
 import icp_pb2_grpc
+import itertools
 
 SPLIT_PATH = "results/splits/splits.json"
 TARGET = "dns://10.43.0.10:53/ocr-headless.default.svc.cluster.local:50051"
@@ -29,12 +30,7 @@ def load_cards():
     splits = json.load(open(SPLIT_PATH))
     ds = load_dataset(splits["dataset"], split="train", revision=splits["revision"])
     raw = ds.cast_column("image", HFImage(decode=False))
-    pool = splits["load_pool"]
-    position = 0
-    while True:
-        card = pool[position]
-        yield card, raw[card]["image"]["bytes"]
-        position = (position + 1) % len(pool)
+    return ((card, raw[card]["image"]["bytes"]) for card in itertools.cycle(splits["load_pool"]))
 
 
 async def send_one(stub, card, png, rate, sent_at, record, results):
