@@ -14,9 +14,9 @@ CHECKED_FIELDS = ["gender", "year", "month", "day", "id_number"]
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--variant", default="easyocr-runs")
-    parser.add_argument("--enhancement", default="+.25 contrast")
-    parser.add_argument("--channel", default="blue")
+    parser.add_argument("--variant", default="tesseract-fast-runs")
+    parser.add_argument("--enhancement", default="deskew")
+    parser.add_argument("--channel", default="green-blue")
     return parser.parse_args()
 
 
