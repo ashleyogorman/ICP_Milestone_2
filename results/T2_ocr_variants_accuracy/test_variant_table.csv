@@ -1,4 +1,5 @@
 enhancement,channel,ocr,cards,field exact match (%),card exact match (%),mean CER,assertion pass rate (%),online assertion pass rate (%),A1_id_format (%),A2_id_matches_date (%),A3_valid_date (%),A4_valid_gender (%),M1 accuracy (%),M1 fields correct (%)
+deskew,green-blue,tesseract-fast-runs,2000,63.23,7.45,0.25,39.0,34.85,79.1,42.6,49.75,83.05,63.14,64.55
 +.25 contrast,blue,easyocr-runs,2000,61.28,6.3,0.25,31.05,26.8,81.35,34.05,48.1,85.35,54.48,60.58
 deskew,green-blue,tesseract-runs,2000,55.42,5.2,0.33,39.4,36.4,69.3,44.45,55.25,66.0,59.28,56.92
 +.25 contrast,blue,easyocr-fp32,2000,54.03,4.05,0.38,19.55,22.3,80.05,26.1,36.95,69.45,55.09,60.79

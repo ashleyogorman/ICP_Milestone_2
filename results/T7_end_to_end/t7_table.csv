@@ -1,0 +1,28 @@
+enhancement,channel,ocr,cards,field exact match (%),card exact match (%),mean CER,assertion pass rate (%),online assertion pass rate (%),A1_id_format (%),A2_id_matches_date (%),A3_valid_date (%),A4_valid_gender (%),M1 accuracy (%),M1 fields correct (%),t6_variant,profiled,meets_sla,cost,replicas,cores_per_replica,batch,p95_ms,target_rate_rps,pareto
+deskew,green-blue,tesseract-fast-runs,2000,63.23,7.45,0.25,39.0,34.85,79.1,42.6,49.75,83.05,63.14,64.55,tesseract-runs,True,True,1.0,1.0,1.0,1.0,14100.1,0.48,True
+deskew,green-blue,easyocr-runs,2000,62.96,6.65,0.25,36.75,33.35,91.25,38.45,47.15,91.5,65.49,64.03,easyocr-runs,True,True,4.0,2.0,2.0,1.0,10520.2,0.48,False
++.25 contrast,blue,easyocr-runs,2000,61.28,6.3,0.25,31.05,26.8,81.35,34.05,48.1,85.35,54.48,60.58,easyocr-runs,True,True,4.0,2.0,2.0,1.0,10520.2,0.48,False
+none,none,easyocr-runs,2000,60.86,5.65,0.3,26.7,23.85,88.65,27.6,35.5,94.75,58.88,61.56,easyocr-runs,True,True,4.0,2.0,2.0,1.0,10520.2,0.48,False
++.25 contrast,blue,tesseract-fast-runs,2000,56.16,5.25,0.31,36.85,32.9,67.15,41.15,51.9,71.1,52.89,57.69,tesseract-runs,True,True,1.0,1.0,1.0,1.0,14100.1,0.48,False
+deskew,green-blue,tesseract-runs,2000,55.42,5.2,0.33,39.4,36.4,69.3,44.45,55.25,66.0,59.28,56.92,,False,False,,,,,,0.48,False
++.25 contrast,blue,easyocr-fp32,2000,54.03,4.05,0.38,19.55,22.3,80.05,26.1,36.95,69.45,55.09,60.79,,False,False,,,,,,0.48,False
++.25 contrast,blue,easyocr,2000,53.72,3.7,0.38,20.0,22.9,79.9,26.7,36.9,69.55,55.14,60.21,easyocr,True,True,4.0,2.0,2.0,1.0,10286.2,0.48,False
+deskew,green-blue,tesseract-fast,2000,51.69,2.6,0.41,13.45,15.5,78.7,14.5,16.4,82.85,63.76,64.55,tesseract-fast,True,True,1.0,1.0,1.0,4.0,15600.6,0.48,False
+none,none,tesseract-fast-runs,2000,49.75,2.9,0.39,17.5,22.65,64.3,20.25,25.7,72.55,48.56,54.16,tesseract-runs,True,True,1.0,1.0,1.0,1.0,14100.1,0.48,False
+deskew,green-blue,tesseract-best,2000,49.4,2.4,0.44,11.2,14.45,79.3,11.9,13.25,80.35,63.14,63.43,,False,False,,,,,,0.48,False
++.25 contrast,blue,tesseract-runs,2000,46.08,3.2,0.43,27.6,23.3,50.0,33.25,52.2,50.25,42.68,47.71,,False,False,,,,,,0.48,False
++.25 contrast,blue,tesseract-fast,2000,44.5,2.2,0.45,13.25,13.75,66.6,14.0,17.4,70.4,55.5,57.69,tesseract-fast,True,True,1.0,1.0,1.0,4.0,15600.6,0.48,False
+deskew,green-blue,easyocr-fp32,2000,43.47,0.8,0.56,6.5,14.0,81.5,10.2,13.65,68.1,61.94,62.34,,False,False,,,,,,0.48,False
+deskew,green-blue,easyocr,2000,42.81,0.7,0.57,6.5,13.7,81.95,10.1,13.8,68.0,62.29,61.76,easyocr,True,True,4.0,2.0,2.0,1.0,10286.2,0.48,False
+none,none,tesseract-runs,2000,42.46,2.6,0.47,19.3,22.0,46.25,23.1,35.3,49.7,41.81,47.15,,False,False,,,,,,0.48,False
+deskew,green-blue,tesseract,2000,41.49,1.25,0.53,12.35,15.9,68.85,13.25,15.3,65.9,59.88,56.92,,False,False,,,,,,0.48,False
++.25 contrast,blue,tesseract-best,2000,40.74,1.65,0.49,10.65,11.8,65.1,11.35,13.75,62.45,53.28,55.07,,False,False,,,,,,0.48,False
+none,none,easyocr-fp32,2000,36.11,0.15,0.75,1.45,7.9,70.85,1.65,2.5,67.9,56.3,60.91,,False,False,,,,,,0.48,False
+none,none,easyocr,2000,35.57,0.1,0.76,1.35,8.15,71.15,1.6,2.35,67.8,56.44,60.01,easyocr,True,True,4.0,2.0,2.0,1.0,10286.2,0.48,False
++.25 contrast,blue,tesseract,2000,33.89,0.95,0.6,9.7,12.35,49.75,10.45,15.95,49.95,45.6,47.71,,False,False,,,,,,0.48,False
+deskew,green-blue,tesseract-2x,2000,33.36,0.15,0.58,5.95,11.0,62.65,6.4,10.2,61.95,49.18,48.53,,False,False,,,,,,0.48,False
+none,none,tesseract-fast,2000,32.84,0.85,0.86,6.15,19.3,55.05,6.65,7.6,59.0,50.06,54.16,tesseract-fast,True,True,1.0,1.0,1.0,4.0,15600.6,0.48,False
++.25 contrast,blue,tesseract-2x,2000,30.89,0.45,0.63,7.0,11.5,50.5,7.7,12.3,47.8,42.65,44.59,,False,False,,,,,,0.48,False
+none,none,tesseract-best,2000,30.44,0.75,0.89,4.95,18.45,53.75,5.4,6.1,52.15,47.49,52.74,,False,False,,,,,,0.48,False
+none,none,tesseract,2000,25.43,0.75,1.0,4.85,17.05,39.15,5.05,7.7,43.45,43.89,47.14,,False,False,,,,,,0.48,False
+none,none,tesseract-2x,2000,22.28,0.05,1.04,2.2,13.0,39.5,2.35,4.7,41.45,41.29,44.96,,False,False,,,,,,0.48,False

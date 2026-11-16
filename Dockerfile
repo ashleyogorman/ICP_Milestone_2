@@ -24,7 +24,7 @@ RUN pip install --upgrade pip && \
 
 RUN python3 -c "import easyocr; easyocr.Reader(['ch_sim'], gpu=False)"
 
-RUN pip install --no-cache-dir jupyter
+RUN pip install --no-cache-dir jupyter matplotlib
 
 COPY milestone_2.ipynb .
 
