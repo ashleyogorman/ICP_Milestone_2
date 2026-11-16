@@ -66,8 +66,14 @@ def run_load(rate):
     result = subprocess.run(["docker", "exec", "icp", "bash", "-c", command],
                             capture_output=True, text=True, check=True)
     return json.loads(result.stdout.strip().splitlines()[-1])
- 
- 
+
+
+def clear_queue():
+    # dont leave failed requests on the server!
+    subprocess.run(["kubectl", "rollout", "restart", "deployment/ocr"], check=True)
+    subprocess.run(["kubectl", "rollout", "status", "deployment/ocr", "--timeout=300s"], check=True)
+
+
 def probe(point, info, rate):
     # runs the load test at the rate
     summary = run_load(rate)
@@ -80,6 +86,8 @@ def probe(point, info, rate):
         "passed": passed, "raw": summary["out"],
     })
     print(f"  {point} at {rate:g} req/s: p95 {summary['p95_ms']} ms, {'pass' if passed else 'fail'}", flush=True)
+    if not passed:
+        clear_queue()
     return passed
  
  

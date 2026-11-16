@@ -13,7 +13,7 @@ import itertools
 SPLIT_PATH = "results/splits/splits.json"
 TARGET = "dns://10.43.0.10:53/ocr-headless.default.svc.cluster.local:50051"
 POISSON_SEED = 35
-OUT_DIR = "results/T6_profiling_raw"
+OUT_DIR = "results/T5_load_tests"
 WARMUP_S = 10 # the first 10s of each run are discarded e.g. round robin connect
 
 
