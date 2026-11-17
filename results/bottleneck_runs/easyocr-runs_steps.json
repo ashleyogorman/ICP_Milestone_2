@@ -1,0 +1,1 @@
+{"status":"success","data":{"resultType":"vector","result":[{"metric":{"step":"decode"},"value":[1794934489.855,"12.205691779672632"]},{"metric":{"step":"preprocess"},"value":[1794934489.855,"0.8949416529503651"]},{"metric":{"step":"ocr"},"value":[1794934489.855,"4391.547444876334"]},{"metric":{"step":"fields_assertions"},"value":[1794934489.855,"0.16503185252076946"]}]}}

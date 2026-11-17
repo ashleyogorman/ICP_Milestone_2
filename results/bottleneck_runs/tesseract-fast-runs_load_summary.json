@@ -1,0 +1,1 @@
+{"run": "rate1.6_dur300_20261117-164312", "out": "results/T5_load_tests/rate1.6_dur300_20261117-164312.jsonl", "target_rate": 1.6, "seed": 35, "recorded": 484, "errors": 0, "unfinished": 0, "achieved_rate": 1.613, "p50_ms": 1054.4, "p95_ms": 2626.4, "p99_ms": 3049.4}

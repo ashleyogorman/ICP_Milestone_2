@@ -1,0 +1,9 @@
+variant,rate_rps,replicas,cores_per_replica,batch,step,mean_ms,share (%)
+tesseract-fast-runs,1.6,1,1,1,decode,18.82,3.88
+tesseract-fast-runs,1.6,1,1,1,preprocess,10.87,2.24
+tesseract-fast-runs,1.6,1,1,1,ocr,453.43,93.6
+tesseract-fast-runs,1.6,1,1,1,fields_assertions,1.31,0.27
+easyocr-runs,0.1,1,1,1,decode,12.21,0.28
+easyocr-runs,0.1,1,1,1,preprocess,0.89,0.02
+easyocr-runs,0.1,1,1,1,ocr,4391.55,99.7
+easyocr-runs,0.1,1,1,1,fields_assertions,0.17,0.0

@@ -55,16 +55,23 @@ QUEUE_LENGTH = Gauge("icp_queue_length", "Requests waiting in the queue")
 CURR_BATCH_SIZE = Gauge("icp_current_batch_size", "Current size of batch")
 ASSERTIONS = Counter("icp_assertions_total", "Cards checked by assertions", ["result"])
 ASSERTION_CHECKS = Counter("icp_assertion_checks_total", "Individual assertion results", ["assertion", "result"])
-# ASSERTION_CHECKS.labels(assertion="A2", result="fail").inc()
+STEP_TIME = Histogram(
+    "icp_step_duration_seconds", "Time per step inside inference", ["step"],
+    buckets=(0.001, 0.005, 0.01, 0.05, 0.1, 0.25, 0.5, 1, 2, 4, 8),
+)
 
 # running the pipeline function
-def run_card(variant, image_bytes): # varient from load variant and 
-    image = np.array(Image.open(io.BytesIO(image_bytes)))
-    x, rotation = preprocess(image, variant["enhancement"], variant["channel"])
-    detections = variant["ocr"](x)
-    if rotation is not None:
-        detections = unrotate_boxes(detections, rotation)
-    checks = check_card(assign_fields(detections))
+def run_card(variant, image_bytes):
+    with STEP_TIME.labels("decode").time():
+        image = np.array(Image.open(io.BytesIO(image_bytes)))
+    with STEP_TIME.labels("preprocess").time():
+        x, rotation = preprocess(image, variant["enhancement"], variant["channel"])
+    with STEP_TIME.labels("ocr").time():
+        detections = variant["ocr"](x)
+    with STEP_TIME.labels("fields_assertions").time():
+        if rotation is not None:
+            detections = unrotate_boxes(detections, rotation)
+        checks = check_card(assign_fields(detections))
     for name, passed in checks.items():
         ASSERTION_CHECKS.labels(assertion=name, result="pass" if passed else "fail").inc()
     ASSERTIONS.labels(result="pass" if all(checks.values()) else "fail").inc()
