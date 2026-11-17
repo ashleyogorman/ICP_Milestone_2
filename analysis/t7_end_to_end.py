@@ -13,7 +13,7 @@ T6_TABLE = "results/T6_profiling_tables/t6_table.csv"
 SLA_DIR = "results/T5_sla_calibration"
 OUT_TABLE = "results/T7_end_to_end/t7_table.csv"
 OUT_PLOT = "plots/pareto.png"
-T6_VARIANT_FOR = {"tesseract-fast-runs": "tesseract-runs", "tesseract-runs": None}
+T6_VARIANT_FOR = {"tesseract-runs": None}  # the 44 MB model was never profiled on the VM
 
 INK, MUTED, GRID, SURFACE = "#0b0b0b", "#52514e", "#e4e3df", "#fcfcfb"
 MEETS, MISSES = "#2a78d6", "#a8a7a2"

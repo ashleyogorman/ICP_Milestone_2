@@ -14,6 +14,9 @@ from icp.assertions import normalize
 SUMMARY = "results/T6_profiling_raw/summary.jsonl"
 OUT_TABLE = "results/T6_profiling_tables/t6_table.csv"
 OUT_BREAKDOWN = "results/T6_profiling_tables/t6_latency_breakdown.csv"
+# On the VM the system chi_sim.traineddata is the 2.5 MB tessdata_fast model, so the
+# sweep points served as "tesseract-runs" ran tesseract-fast-runs.
+VM_VARIANT_NAMES = {"tesseract-runs": "tesseract-fast-runs"}
 SLO_MS = json.load(open("results/T5_sla_calibration/sla.json"))["SLO_ms"]
 
 INK, MUTED, GRID, SURFACE = "#0b0b0b", "#52514e", "#e4e3df", "#fcfcfb"
@@ -91,7 +94,9 @@ def build_table():
             "inference_ms": round(float(inference.mean()), 1),
             "network_ms": round(float((latency - queue - inference).mean()), 1),
         })
-    return pd.DataFrame(table).sort_values(["variant", "cost", "replicas", "batch"], ignore_index=True)
+    table = pd.DataFrame(table)
+    table["variant"] = table["variant"].replace(VM_VARIANT_NAMES)
+    return table.sort_values(["variant", "cost", "replicas", "batch"], ignore_index=True)
 
 
 def style(ax, title, xlabel):

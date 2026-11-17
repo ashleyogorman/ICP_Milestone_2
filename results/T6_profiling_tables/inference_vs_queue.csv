@@ -1,0 +1,25 @@
+config,rate,inference_ms,queue_ms,cards,passed
+"easyocr, 1 pod × 1 core (SLA calibration)",0.03,4313.1,0.1,35,True
+"easyocr, 1 pod × 1 core (SLA calibration)",0.08,4315.3,0.1,32,True
+"easyocr, 1 pod × 1 core (SLA calibration)",0.1,4261.0,1354.0,39,True
+"easyocr, 1 pod × 1 core (SLA calibration)",0.12,4285.2,2903.3,44,True
+"easyocr, 1 pod × 1 core (SLA calibration)",0.14,4291.9,3932.3,45,False
+"easyocr-runs, 1 pod × 1 core",0.1,4210.7,640.5,16,True
+"easyocr-runs, 1 pod × 1 core",0.125,4123.8,4565.9,21,True
+"easyocr-runs, 1 pod × 1 core",0.138,4166.1,7867.2,22,False
+"easyocr-runs, 1 pod × 1 core",0.15,4149.4,9784.6,23,False
+"easyocr-runs, 1 pod × 1 core",0.2,4176.1,21380.8,31,False
+"tesseract-fast, 1 pod × 1 core",0.5,506.7,0.1,67,True
+"tesseract-fast, 1 pod × 1 core",1.0,495.8,137.7,140,True
+"tesseract-fast, 1 pod × 1 core",2.0,464.1,3905.9,241,True
+"tesseract-fast, 1 pod × 1 core",2.25,484.1,13222.6,265,True
+"tesseract-fast, 1 pod × 1 core",2.5,477.0,22034.2,294,False
+"tesseract-fast, 1 pod × 1 core",3.0,473.4,37057.8,366,False
+"tesseract-fast, 1 pod × 1 core",4.0,472.3,65977.8,474,False
+"tesseract-runs, 1 pod × 1 core",0.5,516.2,0.1,67,True
+"tesseract-runs, 1 pod × 1 core",1.0,488.4,120.2,140,True
+"tesseract-runs, 1 pod × 1 core",2.0,465.8,4162.0,241,True
+"tesseract-runs, 1 pod × 1 core",2.25,466.3,11198.7,265,True
+"tesseract-runs, 1 pod × 1 core",2.5,481.2,21964.8,294,False
+"tesseract-runs, 1 pod × 1 core",3.0,473.4,36533.5,366,False
+"tesseract-runs, 1 pod × 1 core",4.0,478.7,69806.4,470,False
